@@ -1,8 +1,13 @@
-export default function PlanetCard({ planet }) {
+import { useNavigate } from "react-router-dom";
+
+export default function PlanetCard({ planet, id }) {
+  const navigate = useNavigate();
+
   return (
-    <div className="planet-card">
-      <img src={planet.imageUrl} alt={planet.planetName} />
-      <h3>{planet.planetName}</h3>
+    <div onClick={() => navigate(`/planet/${id}`)}>
+      <h2>{planet.planetName}</h2>
+      <img src={planet.imageUrl} alt={planet.planetName} width="150" />
+      <p>{planet.galaxy}</p>
     </div>
   );
 }
