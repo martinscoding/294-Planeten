@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
+import { vi } from "vitest";
 import PlanetCard from "../components/PlanetCard";
 import { MemoryRouter, useNavigate } from "react-router-dom";
 
